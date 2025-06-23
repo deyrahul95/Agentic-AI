@@ -14,3 +14,7 @@ wheels/
 
 # checkpoints
 .ipynb_checkpoints
+
+# ide
+.vscode
+.idea
