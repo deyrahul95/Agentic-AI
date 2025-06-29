@@ -10,10 +10,10 @@ load_dotenv()
 
 def get_ollama_model() -> BaseChatModel:
     """
-    Create an instance of local OLLAMA model
+    Create an instance of local ollama model
 
     Returns:
-        an instance of 'BaseChatModel'
+        An instance of 'BaseChatModel'
     """
     base_url: str = str(os.getenv("OLLAMA_URL"))
 
