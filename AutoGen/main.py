@@ -1,23 +1,14 @@
-from autogen_core.models import UserMessage
-
-from utils.ollama_client import get_ollama_client
+from agents.search_assistant import search_assistant_agent
 from utils.logger import logger
 
 import asyncio
 
 
 async def main() -> None:
-    logger.info("⚒️ Creating Ollama model client...")
-    ollama_model_client = get_ollama_client()
+    agent = search_assistant_agent()
 
-    user_message = UserMessage(content="What is the capital of France?", source="user")
-
-    logger.info("⚙️ Getting response from AI....")
-    response = await ollama_model_client.create([user_message])
-    logger.info(f"AI Response => {response.content}")
-
-    await ollama_model_client.close()
-    logger.info("🛑 Ollama model client closed")
+    result = await agent.run(task="Find information on AutoGen")
+    print(result.messages)
 
 
 if __name__ == "__main__":
