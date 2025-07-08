@@ -1,3 +1,5 @@
+from autogen_agentchat.ui import Console
+
 from agents.search_assistant import search_assistant_agent
 from utils.logger import logger
 
@@ -7,8 +9,8 @@ import asyncio
 async def main() -> None:
     agent = search_assistant_agent()
 
-    result = await agent.run(task="Find information on AutoGen")
-    print(result.messages)
+    stream = agent.run_stream(task="Find information on AutoGen")
+    await Console(stream)
 
 
 if __name__ == "__main__":
