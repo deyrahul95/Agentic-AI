@@ -8,6 +8,7 @@ dependencies = [
     "autogen-agentchat>=0.6.2",
     "autogen-core>=0.6.2",
     "autogen-ext[ollama]>=0.6.2",
+    "google-adk>=1.9.0",
     "jupyterlab>=4.4.3",
     "langchain>=0.3.26",
     "langchain-community>=0.3.26",
@@ -16,6 +17,7 @@ dependencies = [
     "langchain-tavily>=0.2.4",
     "langgraph>=0.4.8",
     "langsmith>=0.4.1",
+    "litellm>=1.74.12",
     "mcp>=1.10.0",
     "python-dotenv>=1.1.0",
 ]
