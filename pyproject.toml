@@ -19,5 +19,6 @@ dependencies = [
     "langsmith>=0.4.1",
     "litellm>=1.74.12",
     "mcp>=1.10.0",
+    "openpyxl>=3.1.5",
     "python-dotenv>=1.1.0",
 ]
