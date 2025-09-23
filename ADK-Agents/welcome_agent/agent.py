@@ -20,7 +20,7 @@ class OutputSchema(BaseModel):
     posts: list[PostSchema] = Field(description="The list of social media post.")
 
 
-AGENT_MODEL: LiteLlm = LiteLlm(model="ollama_chat/llama3.2")
+AGENT_MODEL: LiteLlm = LiteLlm(model="openai/google/gemini-2.0-flash-exp:free")
 AGENT_PROMPT: str = """
     You are a master of social media content creator with more than 5 years of experience. 
     Your task is to generate the number of short social media post about the topic provided by user.
